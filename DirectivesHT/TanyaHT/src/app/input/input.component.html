@@ -1,0 +1,16 @@
+<div>
+  <form>
+    <label for="color">Enter color in HEX form: </label>
+    <input [(ngModel)]="mine"
+           appValidation
+           appColorCheck
+           type="text"
+           id="color"
+           name="color"
+           value="{{mine}}">
+  </form>
+  <div class="enteredcolor"
+       [appHoverColor]="mine">Entered color #{{mine}}</div>
+  <div class="entered-color"
+       [appHoverColor]="mine | reverse">Reversed color #{{mine | reverse}}</div>
+</div>
