@@ -1,0 +1,75 @@
+<form [formGroup]="createUser"
+      class="reactive-form">
+  <mat-form-field appearance="standard"
+                  class="full-width">
+    <mat-label>USER NAME</mat-label>
+    <input matInput
+           formControlName="userName">
+  </mat-form-field>
+
+  <table class="full-width"
+         cellspasing="0">
+    <tr>
+      <td>
+        <mat-form-field appearance="standard"
+                        class="full-width">
+          <mat-label>FIRST NAME</mat-label>
+          <input matInput
+                 formControlName="firstName">
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field appearance="standard"
+                        class="full-width">
+          <mat-label>LAST NAME</mat-label>
+          <input matInput
+                 formControlName="lastName">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+
+  <mat-form-field appearance="standard"
+                  class="full-width">
+    <mat-label>EMAIL ADDRESS</mat-label>
+    <input matInput
+           formControlName="emailaddress">
+  </mat-form-field>
+
+  <table class="full-width"
+         cellspasing="0">
+    <tr>
+      <td>
+        <mat-form-field appearance="standard"
+                        class="full-width">
+          <mat-label>PASSWORD</mat-label>
+          <input matInput
+                 formControlName="password">
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field appearance="standard"
+                        class="full-width">
+          <mat-label>CONFIRM PASSWORD</mat-label>
+          <input matInput
+                 formControlName="confirmpassword"
+                 ng-pattern="formData.password">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <mat-form-field appearance="standard"
+                  class="full-width">
+    <mat-label>STATUS</mat-label>
+    <input matInput
+           formControlName="status">
+  </mat-form-field>
+</form>
+<button mat-raised-button
+        class="submit"
+        (click)="submit()"
+        [disabled]="createUser.invalid">SAVE CHANGES</button>
